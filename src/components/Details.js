@@ -8,25 +8,32 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
+import broken from '../assets/broken.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "65vh",
     display: "flex",
     justifyContent: "center",
-    marginTop: '2rem',
+    marginTop: "2rem",
   },
   tableContainer: {
-      display: 'flex',
-      justifyContent: 'center'
+    display: "flex",
+    justifyContent: "center",
   },
   table: {
-      width: '80%',
-      [theme.breakpoints.down('sm')]: {
-          width: '100%'
-      },
-      userSelect: 'none'
-  }
+    width: "80%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+    userSelect: "none",
+  },
+  avatar: {
+    backgroundColor: "#f50057",
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
 }));
 
 export default function Details({users}) {
@@ -49,7 +56,7 @@ export default function Details({users}) {
                   <TableCell component="th" scope="row">
                     <Avatar
                       alt={user.displayName}
-                      src="/broken-image.jpg"
+                      src={broken}
                       className={classes.avatar}
                     />
                   </TableCell>

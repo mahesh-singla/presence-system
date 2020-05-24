@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import Avatar from '@material-ui/core/Avatar';
 import { Tooltip } from '@material-ui/core';
+import broken from '../assets/broken.png';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -28,7 +29,7 @@ export default function Total({users}) {
             <Tooltip title={user.displayName || "Unknown"} key={user.uid}>
               <Avatar
                 alt={user.displayName}
-                src="/broken-image.jpg"
+                src={broken}
                 className={classes.avatar}
               />
             </Tooltip>
