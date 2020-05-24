@@ -38,10 +38,6 @@ function SignIn(props) {
   const [password, setPassword] = useState('')
   const { currentUser } = useContext(UserContext);
 
-  if (currentUser) {
-    props.history.replace('/status')
-  }
-
   const onLogin = event => {
     event.preventDefault();
     firebaseDb.auth().signInWithEmailAndPassword(email, password).then(res => {
@@ -49,6 +45,10 @@ function SignIn(props) {
     }).catch(err => {
       alert(err.message)
     })
+  }
+
+  if (currentUser) {
+    props.history.replace('/status')
   }
 
     return (
