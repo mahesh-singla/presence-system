@@ -19,7 +19,10 @@ const auth = admin.auth();
 const getAllUsers = (req, res) => {
   const maxResults = 1000;
   let allUsers = []
-  res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.set(
+    "Access-Control-Allow-Origin",
+    "https://maheshsingla1702693.netlify.app/"
+  );
   res.set('Access-Control-Allow-Credentials', 'true');
   auth
     .listUsers(maxResults)
