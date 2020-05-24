@@ -21,7 +21,7 @@ const getAllUsers = (req, res) => {
   let allUsers = []
   res.set(
     "Access-Control-Allow-Origin",
-    "https://maheshsingla1702693.netlify.app/"
+    "https://maheshsingla1702693.netlify.com"
   );
   res.set('Access-Control-Allow-Credentials', 'true');
   auth
