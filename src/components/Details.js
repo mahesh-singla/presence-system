@@ -8,7 +8,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
-import broken from '../assets/broken.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,7 +55,7 @@ export default function Details({users}) {
                   <TableCell component="th" scope="row">
                     <Avatar
                       alt={user.displayName}
-                      src={broken}
+                      src="#"
                       className={classes.avatar}
                     />
                   </TableCell>
